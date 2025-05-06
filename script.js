@@ -1,36 +1,66 @@
-// Toggle Dark Mode
-const toggleTheme = document.getElementById('toggle-theme');
-toggleTheme.addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
+// Dark mode toggle
+const toggleBtn = document.getElementById('toggleMode');
+toggleBtn.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
 });
 
-// Back to Top Button
-const backToTopBtn = document.getElementById('backToTopBtn');
+// Smooth scroll for navbar links
+document.querySelectorAll('.navbar a').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
 
-window.onscroll = function () {
-  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-    backToTopBtn.style.display = 'block';
-  } else {
-    backToTopBtn.style.display = 'none';
-  }
-};
+// Scroll-triggered animations (basic fade-in)
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, {
+  threshold: 0.1,
+});
 
-backToTopBtn.addEventListener('click', () => {
+document.querySelectorAll('.animate-on-scroll').forEach(el => {
+  el.classList.add('fade-in');
+  observer.observe(el);
+});
+
+// Back to top button
+const backToTop = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
+});
+backToTop.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// Form Validation
-const form = document.querySelector('form');
-form.addEventListener('submit', function (e) {
-  const name = form.querySelector('input[name="name"]');
-  const email = form.querySelector('input[name="email"]');
-  const message = form.querySelector('textarea[name="message"]');
+// CTA button scrolls to form
+document.querySelectorAll('.cta-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const formSection = document.querySelector('#contact');
+    if (formSection) {
+      formSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
 
-  if (!name.value.trim() || !email.value.trim() || !message.value.trim()) {
-    alert("Please fill in all fields.");
+// Form validation
+document.querySelector('form')?.addEventListener('submit', e => {
+  const name = document.querySelector('#name');
+  const email = document.querySelector('#email');
+  const message = document.querySelector('#message');
+
+  if (!name.value || !email.value || !message.value) {
+    alert('Please fill in all fields.');
     e.preventDefault();
-  } else if (!/\S+@\S+\.\S+/.test(email.value)) {
-    alert("Please enter a valid email address.");
+  } else if (!/^\S+@\S+\.\S+$/.test(email.value)) {
+    alert('Please enter a valid email.');
     e.preventDefault();
   }
 });
