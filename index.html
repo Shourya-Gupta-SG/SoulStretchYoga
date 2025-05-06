@@ -1,1 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SoulStretch Yoga</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <h1>SoulStretch Yoga</h1>
+    <nav>
+      <ul>
+        <li><a href="#welcome">Home</a></li>
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#celebrities">Celebrity Journey</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="toggle-mode">Toggle Mode</button></li>
+      </ul>
+    </nav>
+  </header>
 
+  <!-- Welcome Section -->
+  <section id="welcome">
+    <div class="overlay">
+      <h2>Find balance, strength, and calm with personalized yoga sessions</h2>
+      <p>Fill the form for a free demo class.</p>
+      <a href="#contact" class="cta-btn">Join a Demo Class</a>
+    </div>
+  </section>
+
+  <!-- Classes Section -->
+  <section id="classes">
+    <h2>Our Classes</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Beginner Yoga</h3>
+        <p>Perfect for those new to yoga, focusing on basic postures and breathing techniques.</p>
+      </div>
+      <div class="card">
+        <h3>Intermediate Flow</h3>
+        <p>A more dynamic session for those looking to deepen their practice and flexibility.</p>
+      </div>
+      <div class="card">
+        <h3>Therapeutic Yoga</h3>
+        <p>Customized sessions for healing, recovery, and stress management.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Celebrity Inspirational Journeys -->
+  <section id="celebrities">
+    <h2>Inspirational Journeys</h2>
+    <div class="celebrity">
+      <img src="assets/Steve jobs.jpg" alt="Steve Jobs">
+      <p><strong>Steve Jobs:</strong> Co-founder of Apple — Jobs practiced Zen Buddhism and was known for his deep interest in yoga and mindfulness, which helped shape his creative thinking and focus.</p>
+    </div>
+    <div class="celebrity">
+      <img src="assets/sachin-teldulkar.jpg" alt="Sachin Tendulkar">
+      <p><strong>Sachin Tendulkar:</strong> The Indian cricket legend has shared how yoga helped him manage stress, recover from injuries, and maintain mental clarity.</p>
+    </div>
+    <div class="celebrity">
+      <img src="assets/Virat-kolhi.jpg" alt="Virat Kohli">
+      <p><strong>Virat Kohli:</strong> Kohli incorporates yoga into his fitness regime to enhance flexibility, core strength, and mental focus.</p>
+    </div>
+    <div class="celebrity">
+      <img src="assets/robert-downey-jr.jpg" alt="Robert Downey Jr.">
+      <p><strong>Robert Downey Jr.:</strong> Yoga helped him overcome addiction and improve his mental health and discipline.</p>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials">
+    <h2>Testimonials</h2>
+    <div class="testimonial-slider">
+      <!-- Each card below should be styled with CSS animation -->
+      <div class="testimonial-card">"I joined these yoga classes during a very stressful phase in my life..." – Aarti Mehra</div>
+      <div class="testimonial-card">"I had chronic back pain and poor flexibility due to long working hours..." – Rajesh Iyer</div>
+      <!-- Add all testimonials here similarly -->
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contact-form">
+      <label>Name:</label>
+      <input type="text" name="name" required />
+      <label>Email:</label>
+      <input type="email" name="email" required />
+      <label>Message:</label>
+      <textarea name="message" required></textarea>
+      <button type="submit" class="cta-btn green">Submit</button>
+    </form>
+  </section>
+
+  <!-- Back to Top -->
+  <button id="backToTop">↑</button>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
