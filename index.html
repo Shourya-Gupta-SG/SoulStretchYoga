@@ -1,105 +1,80 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SoulStretch Yoga</title>
   <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <!-- Navbar -->
+</head><body>
   <header class="navbar">
     <h1>SoulStretch Yoga</h1>
     <nav>
       <ul>
-        <li><a href="#welcome">Home</a></li>
+        <li><a href="#home">Home</a></li>
         <li><a href="#classes">Classes</a></li>
-        <li><a href="#celebrities">Celebrity Journey</a></li>
+        <li><a href="#benefits">Benefits</a></li>
         <li><a href="#testimonials">Testimonials</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><button id="toggle-mode">Toggle Mode</button></li>
       </ul>
     </nav>
-  </header>
-
-  <!-- Welcome Section -->
-  <section id="welcome">
-    <div class="overlay">
+    <button id="toggle-mode">Toggle Mode</button>
+  </header>  <section id="home" class="welcome" style="background-image: url('assets/yoga-bg.jpg');">
+    <div class="welcome-content">
       <h2>Find balance, strength, and calm with personalized yoga sessions</h2>
       <p>Fill the form for a free demo class.</p>
-      <a href="#contact" class="cta-btn">Join a Demo Class</a>
+      <a href="#contact" class="cta-button">Join a Demo Class</a>
     </div>
-  </section>
-
-  <!-- Classes Section -->
-  <section id="classes">
+  </section>  <section id="classes">
     <h2>Our Classes</h2>
-    <div class="grid">
-      <div class="card">
+    <div class="class-structure">
+      <div class="class-item">
         <h3>Beginner Yoga</h3>
-        <p>Perfect for those new to yoga, focusing on basic postures and breathing techniques.</p>
+        <p>For those new to yoga. Gentle poses and breathwork to build foundation.</p>
       </div>
-      <div class="card">
-        <h3>Intermediate Flow</h3>
-        <p>A more dynamic session for those looking to deepen their practice and flexibility.</p>
+      <div class="class-item">
+        <h3>Power Yoga</h3>
+        <p>Intense and energizing for improving strength, endurance, and flexibility.</p>
       </div>
-      <div class="card">
-        <h3>Therapeutic Yoga</h3>
-        <p>Customized sessions for healing, recovery, and stress management.</p>
+      <div class="class-item">
+        <h3>Restorative Yoga</h3>
+        <p>Slow-paced sessions using props to fully relax and restore your body.</p>
       </div>
     </div>
-  </section>
-
-  <!-- Celebrity Inspirational Journeys -->
-  <section id="celebrities">
-    <h2>Inspirational Journeys</h2>
-    <div class="celebrity">
-      <img src="assets/Steve jobs.jpg" alt="Steve Jobs">
-      <p><strong>Steve Jobs:</strong> Co-founder of Apple — Jobs practiced Zen Buddhism and was known for his deep interest in yoga and mindfulness, which helped shape his creative thinking and focus.</p>
+  </section>  <section id="benefits">
+    <h2>Benefits of Yoga</h2>
+    <div class="benefit-list">
+      <div class="benefit-item">Improved Flexibility</div>
+      <div class="benefit-item">Better Mental Health</div>
+      <div class="benefit-item">Enhanced Strength & Posture</div>
+      <div class="benefit-item">Stress Relief</div>
+      <div class="benefit-item">Increased Energy Levels</div>
     </div>
-    <div class="celebrity">
-      <img src="assets/sachin-teldulkar.jpg" alt="Sachin Tendulkar">
-      <p><strong>Sachin Tendulkar:</strong> The Indian cricket legend has shared how yoga helped him manage stress, recover from injuries, and maintain mental clarity.</p>
-    </div>
-    <div class="celebrity">
-      <img src="assets/Virat.jpg" alt="Virat Kohli">
-      <p><strong>Virat Kohli:</strong> Kohli incorporates yoga into his fitness regime to enhance flexibility, core strength, and mental focus.</p>
-    </div>
-    <div class="celebrity">
-      <img src="assets/robert-downey-jr.jpg" alt="Robert Downey Jr.">
-      <p><strong>Robert Downey Jr.:</strong> Yoga helped him overcome addiction and improve his mental health and discipline.</p>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section id="testimonials">
+  </section>  <section id="testimonials">
     <h2>Testimonials</h2>
     <div class="testimonial-slider">
-      <!-- Each card below should be styled with CSS animation -->
-      <div class="testimonial-card">"I joined these yoga classes during a very stressful phase in my life..." – Aarti Mehra</div>
-      <div class="testimonial-card">"I had chronic back pain and poor flexibility due to long working hours..." – Rajesh Iyer</div>
-      <!-- Add all testimonials here similarly -->
+      <div class="testimonial">Aarti Mehra: Yoga helped her feel calmer, sleep better, and boosted posture and energy during a stressful time.</div>
+      <div class="testimonial">Rajesh Iyer: Yoga relieved his chronic back pain and improved focus and flexibility.</div>
+      <div class="testimonial">Simran Kaur: Post-pregnancy yoga aided her weight loss and emotional well-being.</div>
+      <div class="testimonial">Ankit Sharma: Yoga reduced his anxiety and improved focus and memory as a student.</div>
+      <div class="testimonial">Nandita Rao: Gentle, modified yoga increased her energy and joint mobility in later years.</div>
+      <div class="testimonial">Neha Verma: Yoga eased her screen-induced neck and back pain and boosted daily energy.</div>
+      <div class="testimonial">Aditya Malhotra: Yoga helped him manage academic stress and anxiety with better focus.</div>
+      <div class="testimonial">Shruti Pillai: Yoga rekindled her mind-body connection and boosted creativity and sleep.</div>
+      <div class="testimonial">Kunal Deshmukh: Yoga gave him mental clarity and stress relief in entrepreneurial life.</div>
+      <div class="testimonial">Ayesha Khan: Yoga brought discipline and balance to her chaotic lifestyle.</div>
+      <div class="testimonial">Aarav Singh: Yoga improved his focus and made school more enjoyable with fun exercises.</div>
+      <div class="testimonial">Meera Joshi: Yoga helped her stay calm and confident during exam stress.</div>
+      <div class="testimonial">Tanmay Nair: Yoga enhanced his athletic performance with better flexibility and recovery.</div>
+      <div class="testimonial">Riya Kulkarni: Yoga relieved her headaches and fatigue, making her feel fresh and strong.</div>
     </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact">
+  </section>  <section id="contact">
     <h2>Contact Us</h2>
     <form id="contact-form">
-      <label>Name:</label>
-      <input type="text" name="name" required />
-      <label>Email:</label>
-      <input type="email" name="email" required />
-      <label>Message:</label>
-      <textarea name="message" required></textarea>
-      <button type="submit" class="cta-btn green">Submit</button>
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="submit-btn">Submit</button>
     </form>
-  </section>
+  </section><button id="back-to-top">↑</button>
 
-  <!-- Back to Top -->
-  <button id="backToTop">↑</button>
-
-  <!-- Script -->
   <script src="script.js"></script>
 </body>
 </html>
