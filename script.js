@@ -1,9 +1,11 @@
-// Dark mode toggle
-const toggleBtn = document.getElementById('toggleMode');
-toggleBtn.addEventListener('click', () => {
-  document.body.classList.toggle('dark');
-});
+// Toggle Mode Button
+const toggleBtn = document.getElementById("toggleMode");
+const body = document.body;
 
+toggleBtn.addEventListener("click", () => {
+  body.classList.toggle("dark-mode");
+  toggleBtn.textContent = body.classList.contains("dark-mode") ? "🌚" : "☀️";
+});
 // Smooth scroll for navbar links
 document.querySelectorAll('.navbar a').forEach(link => {
   link.addEventListener('click', e => {
@@ -30,16 +32,16 @@ document.querySelectorAll('.animate-on-scroll').forEach(el => {
   el.classList.add('fade-in');
   observer.observe(el);
 });
+// Smooth scroll for "Back to Top"
+const backToTop = document.getElementById("backToTop");
 
-// Back to top button
-const backToTop = document.getElementById('backToTop');
-window.addEventListener('scroll', () => {
-  backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
-});
-backToTop.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+window.addEventListener("scroll", () => {
+  backToTop.style.display = window.scrollY > 300 ? "block" : "none";
 });
 
+backToTop.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
 // CTA button scrolls to form
 document.querySelectorAll('.cta-btn').forEach(btn => {
   btn.addEventListener('click', () => {
@@ -49,7 +51,6 @@ document.querySelectorAll('.cta-btn').forEach(btn => {
     }
   });
 });
-
 // Form validation
 document.querySelector('form')?.addEventListener('submit', e => {
   const name = document.querySelector('#name');
